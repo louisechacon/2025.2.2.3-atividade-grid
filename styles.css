@@ -1,11 +1,9 @@
-/*1. CONFIGURAÇÕES GERAIS E TIPOGRAFIA*/
+/*CONFIGURAÇÕES GERAIS E TIPOGRAFIA*/
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
 
 :root {
-    --primary-color: #FF6464;
+    --primary-color: #FF80A1;
     --dark-color: #21243D;
-    /* Títulos e textos principais */
-    --white: #FFFFFF;
     --text-color: #21243D;
     --transition: all 0.3s ease;
 }
@@ -20,7 +18,7 @@ body {
     font-family: 'Heebo', sans-serif;
     line-height: 1.5;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: white;
 }
 
 img {
@@ -33,7 +31,7 @@ a {
     transition: var(--transition);
 }
 
-/* 2. LAYOUT MOBILE-FIRST (ESTRUTURA BASE) */
+/* MOBILE-FIRST */
 
 main {
     padding: 10px;
@@ -57,6 +55,10 @@ main {
 .nav-list a {
     color: white;
     font-weight: 500;
+}
+
+.nav-list a:hover {
+    color:#FF80A1;
 }
 
 /* Hero Section */
@@ -90,7 +92,7 @@ main {
 .btn-download {
     display: inline-block;
     background-color: #FF80A1;
-    color: var(--white);
+    color: white;
     padding: 10px 20px;
     border-radius: 2px;
     margin-top: 30px;
@@ -102,7 +104,7 @@ main {
     transform: translateY(-2px);
 }
 
-/* Habilidades (Skills Section) - Aplicando Grid 4 colunas */
+/* Habilidades */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -118,6 +120,14 @@ main {
 
 .skills-grid i {
     font-size: 40px;
+}
+
+.frontend-icons:hover {
+    transform: scale(1.05);
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
 }
 
 /* Projetos realizados */
@@ -156,7 +166,7 @@ main {
     margin-right: 15px;
 }
 
-/* Sobre mim */
+/* Sobre mim e interesses */
 .about-me {
     margin-top: 40px;
     display: grid;
@@ -207,16 +217,16 @@ main {
     color: white;
 }
 
-/* 3. RESPONSIVIDADE (MEDIA QUERIES) */
+/* RESPONSIVIDADE */
 
-/* Breakpoint para Tablets (768px+) */
+/* Tablets */
 @media (min-width: 768px) {
     .posts-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-content h1 {
-        font-size: 2.8rem;
+        font-size: 45px;
     }
 
     .project-card {
@@ -227,7 +237,7 @@ main {
     }
 }
 
-/* Breakpoint para Desktop (1024px+) */
+/* Breakpoint para Desktop */
 @media (min-width: 1024px) {
 
     /* Limitador de largura para telas grandes */
@@ -240,7 +250,7 @@ main {
         margin-right: auto;
     }
 
-    /* Ajuste Grid Hero (Texto à esquerda, Foto à direita) */
+    /* Ajuste Grid Hero (Texto à esquerda, foto à direita) */
     .hero-section {
         grid-template-columns: 1fr 250px;
         text-align: left;
